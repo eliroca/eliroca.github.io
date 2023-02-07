@@ -1,0 +1,85 @@
+site_name: eliroca
+site_url: https://eliroca.github.io
+site_description: eliroca
+site_author: Elisei Roca
+
+repo_name: eliroca/eliroca.github.io
+repo_url: https://github.com/eliroca/eliroca.github.io
+edit_uri: edit/main/docs/
+
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: green
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: green
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  #logo: assets/logo.svg
+  #favicon: assets/logo-16.png
+  features:
+    - content.code.copy
+    - navigation.instant
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+
+plugins:
+  - search
+  - markdownextradata
+  - git-revision-date-localized:
+      exclude:
+        - index.md
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: eliroca
+      repo: eliroca.github.io
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
